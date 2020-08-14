@@ -24,8 +24,8 @@
         <module>spring-scaffold-web</module>
         <module>spring-scaffold-repository</module>
         <module>spring-scaffold-service</module>
-        <module>spring-scaffold-entity</module>
         <module>spring-scaffold-common</module>
+        <module>spring-scaffold-manager</module>
     </modules>
 
     <dependencies>
@@ -66,12 +66,12 @@
             </dependency>
             <dependency>
                 <groupId>me.jianghs</groupId>
-                <artifactId>spring-scaffold-entity</artifactId>
+                <artifactId>spring-scaffold-common</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>me.jianghs</groupId>
-                <artifactId>spring-scaffold-common</artifactId>
+                <artifactId>spring-scaffold-manager</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>

@@ -1,10 +1,10 @@
-package me.jianghs.springscaffoldentity;
+package me.jianghs.springscaffoldmanager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringScaffoldEntityApplicationTests {
+class SpringScaffoldManagerApplicationTests {
 
     @Test
     void contextLoads() {

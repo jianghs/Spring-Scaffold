@@ -1,13 +1,13 @@
-package me.jianghs.springscaffoldentity;
+package me.jianghs.springscaffoldmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringScaffoldEntityApplication {
+public class SpringScaffoldManagerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringScaffoldEntityApplication.class, args);
+        SpringApplication.run(SpringScaffoldManagerApplication.class, args);
     }
 
 }
