@@ -1,10 +1,10 @@
-package me.jianghs.springscoff;
+package me.jianghs.springscaffoldservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringScoffApplicationTests {
+class SpringScaffoldServiceApplicationTests {
 
     @Test
     void contextLoads() {

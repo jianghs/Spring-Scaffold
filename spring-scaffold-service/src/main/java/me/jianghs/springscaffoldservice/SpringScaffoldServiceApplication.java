@@ -1,13 +1,13 @@
-package me.jianghs.springscoff;
+package me.jianghs.springscaffoldservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringScoffApplication {
+public class SpringScaffoldServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringScoffApplication.class, args);
+        SpringApplication.run(SpringScaffoldServiceApplication.class, args);
     }
 
 }

@@ -8,15 +8,24 @@
         <version>2.4.0-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>me.jianghs</groupId>
     <artifactId>spring-scaffold</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-scaffold</name>
     <description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
+    <modules>
+        <module>spring-scaffold-web</module>
+        <module>spring-scaffold-repository</module>
+        <module>spring-scaffold-service</module>
+        <module>spring-scaffold-entity</module>
+    </modules>
 
     <dependencies>
         <dependency>
@@ -49,6 +58,32 @@
         </dependency>
     </dependencies>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>me.jianghs</groupId>
+                <artifactId>spring-scaffold-web</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>me.jianghs</groupId>
+                <artifactId>spring-scaffold-repository</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>me.jianghs</groupId>
+                <artifactId>spring-scaffold-service</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>me.jianghs</groupId>
+                <artifactId>spring-scaffold-entity</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
     <build>
         <plugins>
             <plugin>
@@ -58,48 +93,17 @@
         </plugins>
     </build>
 
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>spring-milestones</id>-->
-<!--            <name>Spring Milestones</name>-->
-<!--            <url>https://repo.spring.io/milestone</url>-->
-<!--        </repository>-->
-<!--        <repository>-->
-<!--            <id>spring-snapshots</id>-->
-<!--            <name>Spring Snapshots</name>-->
-<!--            <url>https://repo.spring.io/snapshot</url>-->
-<!--            <snapshots>-->
-<!--                <enabled>true</enabled>-->
-<!--            </snapshots>-->
-<!--        </repository>-->
-<!--    </repositories>-->
-<!--    <pluginRepositories>-->
-<!--        <pluginRepository>-->
-<!--            <id>spring-milestones</id>-->
-<!--            <name>Spring Milestones</name>-->
-<!--            <url>https://repo.spring.io/milestone</url>-->
-<!--        </pluginRepository>-->
-<!--        <pluginRepository>-->
-<!--            <id>spring-snapshots</id>-->
-<!--            <name>Spring Snapshots</name>-->
-<!--            <url>https://repo.spring.io/snapshot</url>-->
-<!--            <snapshots>-->
-<!--                <enabled>true</enabled>-->
-<!--            </snapshots>-->
-<!--        </pluginRepository>-->
-<!--    </pluginRepositories>-->
-
     <!-- deploy -->
     <distributionManagement>
         <repository>
-            <id>releases</id>
+            <id>dev5-releases</id>
             <name>User Project Release</name>
-            <url>http://139.196.190.46:8081/repository/maven-releases/</url>
+            <url>http://47.92.69.178:8081/repository/dev5-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>snapshots</id>
+            <id>dev5-snapshots</id>
             <name>User Project SNAPSHOTS</name>
-            <url>http://139.196.190.46:8081/repository/maven-snapshots/</url>
+            <url>http://47.92.69.178:8081/repository/dev5-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
