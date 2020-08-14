@@ -6,13 +6,13 @@
         <groupId>me.jianghs</groupId>
         <artifactId>spring-scaffold</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-<!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+        <!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     </parent>
     <groupId>me.jianghs</groupId>
-    <artifactId>spring-scaffold-entity</artifactId>
+    <artifactId>spring-scaffold-manager</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-scaffold-entity</name>
-    <description>Demo project for Spring Boot</description>
+    <name>spring-scaffold-manager</name>
+    <description>可复用逻辑层</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -25,6 +25,11 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
+        <dependency>
+            <groupId>me.jianghs</groupId>
+            <artifactId>spring-scaffold-repository</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -35,19 +40,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <!-- deploy -->
-    <distributionManagement>
-        <repository>
-            <id>dev5-releases</id>
-            <name>User Project Release</name>
-            <url>http://47.92.69.178:8081/repository/dev5-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>dev5-snapshots</id>
-            <name>User Project SNAPSHOTS</name>
-            <url>http://47.92.69.178:8081/repository/dev5-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
 
 </project>
