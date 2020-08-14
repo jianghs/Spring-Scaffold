@@ -17,13 +17,13 @@ import java.util.List;
  * @createDate: 2020/8/14 16:19
  * @version: 1.0
  */
-@Mapper
+@Mapper(componentModel="spring")
 public interface UserConverter {
 
-    UserConverter INSTANCE = Mappers.getMapper(UserConverter.class);
+//    UserConverter INSTANCE = Mappers.getMapper(UserConverter.class);
 
     /**
-     *
+     * DO 转换成 BO
      * @param userDO
      * @param loginDO
      * @return
@@ -36,7 +36,7 @@ public interface UserConverter {
     UserBO convertBean(UserDO userDO, LoginDO loginDO);
 
     /**
-     *
+     * DO LIST 转换成 BO LIST
      * @param userDOList
      * @return
      */

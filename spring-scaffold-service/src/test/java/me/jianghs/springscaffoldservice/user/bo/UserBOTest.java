@@ -5,13 +5,18 @@ import me.jianghs.springscaffoldrepository.user.model.LoginDO;
 import me.jianghs.springscaffoldrepository.user.model.UserDO;
 import me.jianghs.springscaffoldservice.user.convert.UserConverter;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Slf4j
+@SpringBootTest
 class UserBOTest {
+    @Autowired
+    UserConverter userConverter;
 
     @Test
     public void test() {
@@ -32,7 +37,7 @@ class UserBOTest {
 
             userDOS.add(userDO);
             log.info("第{}个输出：{}", i, userDO.toString());
-            UserBO userBO = UserConverter.INSTANCE.convertBean(userDO, loginDO);
+            UserBO userBO = userConverter.convertBean(userDO, loginDO);
             log.info("第{}个输出：{}", i, userBO.toString());
         }
         log.info("list输出：{}", userDOS.toString());
