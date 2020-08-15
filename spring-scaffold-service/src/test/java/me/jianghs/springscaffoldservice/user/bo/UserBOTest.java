@@ -24,6 +24,7 @@ class UserBOTest {
         for (int i = 0; i < 3; i++) {
             UserDO userDO = new UserDO();
             userDO.setId((long)i);
+            userDO.setUserCode(String.valueOf(i));
             userDO.setName("张三");
             userDO.setSex("M");
             userDO.setEmail("xx@xx.com");
@@ -32,7 +33,7 @@ class UserBOTest {
 
             LoginDO loginDO = new LoginDO();
             loginDO.setId((long)i);
-            loginDO.setUserId(userDO.getId());
+            loginDO.setLoginCode(String.valueOf(i));
             loginDO.setLastLoginDate(new Date());
 
             userDOS.add(userDO);

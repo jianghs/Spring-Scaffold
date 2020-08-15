@@ -2,6 +2,7 @@ package me.jianghs.springscaffoldrepository.user.model;
 
 import lombok.Data;
 
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -12,10 +13,17 @@ import java.util.Date;
  * @version: 1.0
  */
 @Data
+@Entity
+@Table(name = "login")
 public class LoginDO {
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="id")
     private Long id;
 
-    private Long userId;
+    @Column(name = "login_code", nullable = false)
+    private String loginCode;
 
+    @Column(name = "last_login_date", nullable = false)
     private Date lastLoginDate;
 }
