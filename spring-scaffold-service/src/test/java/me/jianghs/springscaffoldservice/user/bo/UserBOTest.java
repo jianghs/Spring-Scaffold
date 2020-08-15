@@ -19,7 +19,7 @@ class UserBOTest {
     UserConverter userConverter;
 
     @Test
-    public void test() {
+    void test() {
         List<UserDO> userDOS = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             UserDO userDO = new UserDO();
