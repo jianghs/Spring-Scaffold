@@ -5,7 +5,12 @@ import me.jianghs.springscaffold.service.user.bo.UserBO;
 import me.jianghs.springscaffold.web.user.convert.WebUserConverter;
 import me.jianghs.springscaffold.web.user.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 /**
  * @className: UserController
@@ -30,8 +35,11 @@ public class UserController {
     }
 
     @PostMapping("/save")
-    public Boolean save(@RequestBody UserVO userVO) {
+    public String save(@Valid @RequestBody UserVO userVO, BindingResult bindingResult) {
+        for (ObjectError objectError : bindingResult.getAllErrors()) {
+            return objectError.getDefaultMessage();
+        }
         userService.save(webUserConverter.toUserBO(userVO));
-        return true;
+        return "true";
     }
 }

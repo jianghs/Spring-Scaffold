@@ -1,7 +1,13 @@
 package me.jianghs.springscaffold.web.user.vo;
 
 import lombok.Data;
+import org.hibernate.validator.constraints.Length;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -12,16 +18,22 @@ import java.util.Date;
  * @version: 1.0
  */
 @Data
-public class UserVO {
+public class UserVO implements Serializable {
 
-
+    @NotBlank(message = "姓名不得为空")
     private String name;
 
+    @NotNull(message = "手机号不得为空")
+    @Length(min = 11, max = 11, message = "手机号必须11位")
     private String mobile;
 
+    @NotNull(message = "性别不得为空")
     private String sex;
 
+    @NotNull(message = "邮箱不得为空")
+    @Email(message = "邮箱格式不正确")
     private String email;
 
+    @NotNull(message = "出生日期不得为空")
     private String date;
 }
