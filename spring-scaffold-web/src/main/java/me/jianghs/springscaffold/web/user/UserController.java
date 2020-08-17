@@ -5,10 +5,7 @@ import me.jianghs.springscaffold.service.user.bo.UserBO;
 import me.jianghs.springscaffold.web.user.convert.WebUserConverter;
 import me.jianghs.springscaffold.web.user.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @className: UserController
@@ -30,5 +27,11 @@ public class UserController {
     public UserVO getUserInfo(@PathVariable("id") long id) {
         UserBO userBO = userService.getUserInfo(id);
         return webUserConverter.fromUserBO(userBO);
+    }
+
+    @PostMapping("/save")
+    public Boolean save(@RequestBody UserVO userVO) {
+        userService.save(webUserConverter.toUserBO(userVO));
+        return true;
     }
 }

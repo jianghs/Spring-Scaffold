@@ -11,7 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @className: UserServiceImpl
@@ -48,7 +50,11 @@ public class UserServiceImpl implements UserService {
     @Transactional(rollbackFor = Exception.class)
     public void save(UserBO userBO) {
         UserDO userDO = userConverter.toUserDO(userBO);
+        userDO.setUserCode(UUID.randomUUID().toString());
+
         LoginDO loginDO = userConverter.toLoginDO(userBO);
+        loginDO.setLoginCode(UUID.randomUUID().toString());
+        loginDO.setLastLoginDate(new Date());
         userRepository.save(userDO);
         loginRepository.save(loginDO);
     }
