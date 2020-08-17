@@ -35,10 +35,8 @@ public class UserController {
     }
 
     @PostMapping("/save")
-    public String save(@Valid @RequestBody UserVO userVO, BindingResult bindingResult) {
-        for (ObjectError objectError : bindingResult.getAllErrors()) {
-            return objectError.getDefaultMessage();
-        }
+    public String save(@Valid @RequestBody UserVO userVO) {
+
         userService.save(webUserConverter.toUserBO(userVO));
         return "true";
     }

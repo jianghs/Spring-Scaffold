@@ -3,10 +3,7 @@ package me.jianghs.springscaffold.web.user.vo;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -28,6 +25,7 @@ public class UserVO implements Serializable {
     private String mobile;
 
     @NotNull(message = "性别不得为空")
+    @Pattern(regexp = "[FM]", message = "性别只能为M-男或者F-女")
     private String sex;
 
     @NotNull(message = "邮箱不得为空")
