@@ -12,4 +12,4 @@ spring:
           auto: none
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         format_sql: true
-    show-sql: true
+    show-sql: false
