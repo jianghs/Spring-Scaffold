@@ -13,7 +13,7 @@ import org.mapstruct.Mapping;
  * @version: 1.0
  */
 @Mapper(componentModel="spring")
-public interface UserConverter {
+public interface WebUserConverter {
     /**
      * BO 转换成 VO
      * @param userBO
