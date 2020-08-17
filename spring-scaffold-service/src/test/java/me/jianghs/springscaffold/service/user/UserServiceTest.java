@@ -17,8 +17,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @Slf4j
 @SpringBootTest
 class UserServiceTest {
@@ -68,7 +66,7 @@ class UserServiceTest {
         UserDO userDO = userConverter.toUserDO(userBO);
         userDO = userRepository.save(userDO);
 
-        Assertions.assertEquals("马波", userDO.getName());
+        Assertions.assertEquals("马波mabo", userDO.getName());
         Assertions.assertEquals(today, loginDO.getLastLoginDate());
     }
 }

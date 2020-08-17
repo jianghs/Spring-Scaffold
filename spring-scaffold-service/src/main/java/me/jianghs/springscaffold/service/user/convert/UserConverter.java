@@ -3,7 +3,6 @@ package me.jianghs.springscaffold.service.user.convert;
 import me.jianghs.springscaffold.repository.user.model.LoginDO;
 import me.jianghs.springscaffold.repository.user.model.UserDO;
 import me.jianghs.springscaffold.service.user.bo.UserBO;
-import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
@@ -20,7 +19,6 @@ import java.util.List;
 @Mapper(componentModel="spring")
 public interface UserConverter {
 
-//    UserConverter INSTANCE = Mappers.getMapper(UserConverter.class);
 
     /**
      * DO 转换成 BO
