@@ -15,6 +15,8 @@ import java.util.Date;
 public class UserBO {
     private Long id;
 
+    private String userCode;
+
     private String name;
 
     private String mobile;
@@ -24,6 +26,8 @@ public class UserBO {
     private String email;
 
     private Date date;
+
+    private String loginCode;
 
     private Date loginDate;
 

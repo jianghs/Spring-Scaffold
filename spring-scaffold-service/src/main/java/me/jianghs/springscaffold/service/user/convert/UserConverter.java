@@ -3,6 +3,7 @@ package me.jianghs.springscaffold.service.user.convert;
 import me.jianghs.springscaffold.repository.user.model.LoginDO;
 import me.jianghs.springscaffold.repository.user.model.UserDO;
 import me.jianghs.springscaffold.service.user.bo.UserBO;
+import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
@@ -41,4 +42,21 @@ public interface UserConverter {
      */
     List<UserBO> convertList(List<UserDO> userDOList);
 
+    /**
+     * UserBO -> UserDO
+     * @param userBO
+     * @return
+     */
+    @Mapping(source = "date", target = "birthday")
+    @Mapping(target = "id", ignore = true)
+    UserDO toUserDO(UserBO userBO);
+
+    /**
+     * UserBO -> LoginDO
+     * @param userBO
+     * @return
+     */
+    @Mapping(source = "loginDate", target = "lastLoginDate")
+    @Mapping(target = "id", ignore = true)
+    LoginDO toLoginDO(UserBO userBO);
 }
