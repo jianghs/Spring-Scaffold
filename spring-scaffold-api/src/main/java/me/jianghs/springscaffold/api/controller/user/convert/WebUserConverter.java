@@ -1,6 +1,6 @@
-package me.jianghs.springscaffold.api.user.convert;
+package me.jianghs.springscaffold.api.controller.user.convert;
 
-import me.jianghs.springscaffold.api.user.vo.UserVO;
+import me.jianghs.springscaffold.api.controller.user.vo.UserVO;
 import me.jianghs.springscaffold.service.user.bo.UserBO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

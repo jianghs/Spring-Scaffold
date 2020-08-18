@@ -1,4 +1,4 @@
-package me.jianghs.springscaffold.api.user.vo;
+package me.jianghs.springscaffold.api.controller.user.vo;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
