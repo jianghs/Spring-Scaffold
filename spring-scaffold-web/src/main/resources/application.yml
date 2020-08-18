@@ -1,9 +1,13 @@
+server:
+  port: 8080
 spring:
+  profiles:
+    include: repository
   thymeleaf:
     # 开启thymeleaf视图解析
     enabled: true
     # 模板的模式，支持 HTML, XML TEXT JAVASCRIPT
-    mode: HTML5
+    mode: HTML
     # 编码 可不用配置
     encoding: UTF-8
     # 内容类别,可不用配置
@@ -14,18 +18,3 @@ spring:
     prefix: classpath:/templates/
     # 后缀名
     suffix: .html
-
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://139.196.190.46:3306/my_db?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSSL=true
-    username: root
-    password: Jianghs@123
-
-  jpa:
-    properties:
-      hibernate:
-        hbm2ddl:
-          auto: none
-        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-        format_sql: true
-    show-sql: false

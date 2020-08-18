@@ -1,8 +1,15 @@
 # spring-scaffold
 springboot 传统分层架构，项目脚手架
 
+## spring-scaffold-api
+- 提供对外接口
+- 只能请求 service 层
+- 参数校验
+- 异常兜底
+- 领域模型：VO
+
 ## spring-scaffold-web
-- 提供对外服务
+- 提供返回各种视图，纯后台可以没有该模块
 - 只能请求 service 层
 - 参数校验
 - 异常兜底

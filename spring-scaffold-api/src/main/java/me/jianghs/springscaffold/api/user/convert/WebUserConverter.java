@@ -1,7 +1,7 @@
-package me.jianghs.springscaffold.web.user.convert;
+package me.jianghs.springscaffold.api.user.convert;
 
+import me.jianghs.springscaffold.api.user.vo.UserVO;
 import me.jianghs.springscaffold.service.user.bo.UserBO;
-import me.jianghs.springscaffold.web.user.vo.UserVO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

@@ -1,11 +1,10 @@
-package me.jianghs.springscaffold.web.user.vo;
+package me.jianghs.springscaffold.api.user.vo;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.*;
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @className: UserVO

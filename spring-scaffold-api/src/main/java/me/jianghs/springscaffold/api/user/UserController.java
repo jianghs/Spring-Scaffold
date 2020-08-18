@@ -1,12 +1,10 @@
-package me.jianghs.springscaffold.web.user;
+package me.jianghs.springscaffold.api.user;
 
-import me.jianghs.springscaffold.common.entity.Result;
+import me.jianghs.springscaffold.api.user.convert.WebUserConverter;
+import me.jianghs.springscaffold.api.user.vo.UserVO;
 import me.jianghs.springscaffold.service.user.UserService;
 import me.jianghs.springscaffold.service.user.bo.UserBO;
-import me.jianghs.springscaffold.web.user.convert.WebUserConverter;
-import me.jianghs.springscaffold.web.user.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.NumberFormat;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -14,7 +12,7 @@ import javax.validation.constraints.NotBlank;
 
 /**
  * @className: UserController
- * @description: TODO
+ * @description:
  * @author: jianghs430
  * @createDate: 2020/8/17 15:21
  * @version: 1.0
