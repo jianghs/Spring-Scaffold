@@ -21,6 +21,7 @@
     </properties>
 
     <modules>
+        <module>spring-scaffold-api</module>
         <module>spring-scaffold-web</module>
         <module>spring-scaffold-repository</module>
         <module>spring-scaffold-service</module>
@@ -38,6 +39,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -49,6 +56,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>me.jianghs</groupId>
+                <artifactId>spring-scaffold-api</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
             <dependency>
                 <groupId>me.jianghs</groupId>
                 <artifactId>spring-scaffold-web</artifactId>

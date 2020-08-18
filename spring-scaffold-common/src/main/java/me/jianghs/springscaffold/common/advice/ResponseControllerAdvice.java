@@ -14,12 +14,12 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 /**
  * @className: ResponseControllerAdvice
- * @description: TODO
+ * @description:
  * @author: jianghs430
  * @createDate: 2020/8/18 10:25
  * @version: 1.0
  */
-@RestControllerAdvice(basePackages = {"me.jianghs.springscaffold.web"})
+@RestControllerAdvice(basePackages = {"me.jianghs.springscaffold.web.api"})
 public class ResponseControllerAdvice implements ResponseBodyAdvice<Object> {
     @Override
     public boolean supports(MethodParameter methodParameter, Class<? extends HttpMessageConverter<?>> aClass) {
