@@ -1,16 +1,16 @@
 package me.jianghs.springscaffold.web.user;
 
+import me.jianghs.springscaffold.common.entity.Result;
 import me.jianghs.springscaffold.service.user.UserService;
 import me.jianghs.springscaffold.service.user.bo.UserBO;
 import me.jianghs.springscaffold.web.user.convert.WebUserConverter;
 import me.jianghs.springscaffold.web.user.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
-import org.springframework.validation.annotation.Validated;
+import org.springframework.format.annotation.NumberFormat;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
 
 /**
  * @className: UserController
@@ -29,15 +29,13 @@ public class UserController {
     WebUserConverter webUserConverter;
 
     @GetMapping("/{id}")
-    public UserVO getUserInfo(@PathVariable("id") long id) {
+    public UserVO getUserInfo(@NotBlank(message = "id不得为空") @PathVariable("id") long id) {
         UserBO userBO = userService.getUserInfo(id);
         return webUserConverter.fromUserBO(userBO);
     }
 
     @PostMapping("/save")
-    public String save(@Valid @RequestBody UserVO userVO) {
-
+    public void save(@Valid @RequestBody UserVO userVO) {
         userService.save(webUserConverter.toUserBO(userVO));
-        return "true";
     }
 }

@@ -1,5 +1,6 @@
 package me.jianghs.springscaffold.service.user.impl;
 
+import me.jianghs.springscaffold.common.exception.BaseException;
 import me.jianghs.springscaffold.repository.user.model.LoginDO;
 import me.jianghs.springscaffold.repository.user.model.UserDO;
 import me.jianghs.springscaffold.repository.user.repository.LoginRepository;
@@ -13,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 /**
@@ -41,8 +43,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserBO getUserInfo(Long id) {
-        UserDO userDO = userRepository.findById(id).get();
-        LoginDO loginDO = loginRepository.findById(id).get();
+        UserDO userDO = userRepository.findById(id).orElseThrow(() -> new BaseException("用户信息不存在"));
+        LoginDO loginDO = loginRepository.findById(id).orElseThrow(() -> new BaseException("登录信息不存在"));
         return userConverter.convertBean(userDO, loginDO);
     }
 
