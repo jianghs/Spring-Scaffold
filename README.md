@@ -8,13 +8,6 @@ springboot 传统分层架构，项目脚手架
 - 异常兜底
 - 领域模型：VO
 
-## spring-scaffold-web
-- 提供返回各种视图，纯后台可以没有该模块
-- 只能请求 service 层
-- 参数校验
-- 异常兜底
-- 领域模型：VO
-
 ## spring-scaffold-service
 - 业务层
 - 可以请求 manager 或者 repository 层
@@ -40,3 +33,10 @@ springboot 传统分层架构，项目脚手架
 - 全局异常
 - 统一响应数据规范
 - 日志
+
+## ~~spring-scaffold-web~~
+- 提供返回各种视图，纯后台可以没有该模块
+- 只能请求 service 层
+- 参数校验
+- 异常兜底
+- 领域模型：VO

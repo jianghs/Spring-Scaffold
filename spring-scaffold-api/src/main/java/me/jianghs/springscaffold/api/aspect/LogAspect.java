@@ -1,4 +1,4 @@
-package me.jianghs.springscaffold.common.aspect;
+package me.jianghs.springscaffold.api.aspect;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
@@ -20,13 +20,13 @@ import java.util.Arrays;
  * @createDate: 2020/8/18 14:52
  * @version: 1.0
  */
-//@Aspect
-//@Component
+@Aspect
+@Component
 @Slf4j
 public class LogAspect {
     ThreadLocal<Long> startTime = new ThreadLocal<>();
 
-    @Pointcut("execution(public * me.jianghs.springscaffold..*.*(..))")
+    @Pointcut("execution(public * me.jianghs.springscaffold.api..*Controller.*(..))")
     public void requestLog(){};
 
     @Before("requestLog()")
