@@ -1,4 +1,4 @@
-package me.jianghs.springscaffold.service.user.bo;
+package me.jianghs.springscaffold.service.bo.user;
 
 import lombok.Data;
 

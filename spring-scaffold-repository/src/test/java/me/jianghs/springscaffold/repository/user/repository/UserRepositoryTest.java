@@ -1,7 +1,8 @@
 package me.jianghs.springscaffold.repository.user.repository;
 
 import lombok.extern.slf4j.Slf4j;
-import me.jianghs.springscaffold.repository.user.model.UserDO;
+import me.jianghs.springscaffold.repository.dao.user.UserRepository;
+import me.jianghs.springscaffold.repository.model.user.UserDO;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

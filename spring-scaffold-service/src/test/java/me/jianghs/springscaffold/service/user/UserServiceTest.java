@@ -1,12 +1,12 @@
 package me.jianghs.springscaffold.service.user;
 
 import lombok.extern.slf4j.Slf4j;
-import me.jianghs.springscaffold.repository.user.model.LoginDO;
-import me.jianghs.springscaffold.repository.user.model.UserDO;
-import me.jianghs.springscaffold.repository.user.repository.LoginRepository;
-import me.jianghs.springscaffold.repository.user.repository.UserRepository;
-import me.jianghs.springscaffold.service.user.bo.UserBO;
-import me.jianghs.springscaffold.service.user.convert.UserConverter;
+import me.jianghs.springscaffold.repository.model.user.LoginDO;
+import me.jianghs.springscaffold.repository.model.user.UserDO;
+import me.jianghs.springscaffold.repository.dao.user.LoginRepository;
+import me.jianghs.springscaffold.repository.dao.user.UserRepository;
+import me.jianghs.springscaffold.service.bo.user.UserBO;
+import me.jianghs.springscaffold.service.convert.user.UserConverter;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

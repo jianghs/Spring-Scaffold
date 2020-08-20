@@ -1,4 +1,4 @@
-package me.jianghs.springscaffold.repository.user.model;
+package me.jianghs.springscaffold.repository.model.user;
 
 import lombok.Data;
 

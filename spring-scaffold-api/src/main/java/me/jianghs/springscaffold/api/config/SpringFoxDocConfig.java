@@ -12,7 +12,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @className: SpringFoxDocConfig
- * @description: TODO
+ * @description:
  * @author: jianghs430
  * @createDate: 2020/8/18 17:05
  * @version: 1.0

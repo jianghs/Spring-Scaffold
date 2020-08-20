@@ -1,6 +1,6 @@
-package me.jianghs.springscaffold.repository.user.repository;
+package me.jianghs.springscaffold.repository.dao.user;
 
-import me.jianghs.springscaffold.repository.user.model.LoginDO;
+import me.jianghs.springscaffold.repository.model.user.LoginDO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

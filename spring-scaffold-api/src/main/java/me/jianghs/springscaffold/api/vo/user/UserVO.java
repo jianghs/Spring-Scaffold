@@ -1,4 +1,4 @@
-package me.jianghs.springscaffold.api.controller.user.vo;
+package me.jianghs.springscaffold.api.vo.user;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
@@ -15,7 +15,6 @@ import java.io.Serializable;
  */
 @Data
 public class UserVO implements Serializable {
-
     @NotBlank(message = "姓名不得为空")
     private String name;
 
