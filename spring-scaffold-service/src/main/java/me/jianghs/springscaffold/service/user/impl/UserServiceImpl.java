@@ -45,16 +45,17 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Page<UserDO> getUserPage(Integer page, Integer size, UserPageBO userPageBO) {
-        Pageable pageable = PageRequest.of(page, size);
-        Page<UserDO> userDOPage = userRepository.findAll((Specification<UserDO>) (root, criteriaQuery, criteriaBuilder) -> {
+        Pageable pageable = PageRequest.of(page-1, size, Sort.by("id").descending());
+        Specification<UserDO> specification = (Specification<UserDO>) (root, criteriaQuery, criteriaBuilder) -> {
             List<Predicate> list = new ArrayList<>();
             if(StringUtils.isNotBlank(userPageBO.getName())){
-                list.add(criteriaBuilder.equal(root.get("name").as(String.class), userPageBO.getName()));
+                Predicate predicate = criteriaBuilder.equal(root.get("name").as(String.class), userPageBO.getName());
+                list.add(predicate);
             }
             Predicate[] p = new Predicate[list.size()];
             return criteriaBuilder.and(list.toArray(p));
-        }, pageable);
-
+        };
+        Page<UserDO> userDOPage = userRepository.findAll(specification, pageable);
         return userDOPage;
     }
 
