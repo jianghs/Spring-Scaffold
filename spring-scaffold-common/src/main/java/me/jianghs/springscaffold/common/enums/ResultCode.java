@@ -4,7 +4,7 @@ import lombok.Getter;
 
 /**
  * @className: ResultCode
- * @description: TODO
+ * @description: 响应体枚举
  * @author: jianghs430
  * @createDate: 2020/8/18 10:12
  * @version: 1.0
